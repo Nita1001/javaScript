@@ -6,7 +6,7 @@ it rounded to two decimal places.
 
 const calcCircleArea = (radius) => {
   const pi = 3.14159;
-  let circleArea = 2 * pi * radius;
+  let circleArea = pi * Math.pow(radius, 2);
   console.log(circleArea);
   console.log(Math.round(circleArea));
 }
