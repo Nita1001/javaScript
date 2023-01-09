@@ -1,15 +1,12 @@
 // a function called countryInfo
-
 let sentence ;
-function countryInfo (country, population, capitalCity) 
+const countryInfo  = (country, population, capitalCity) =>
 {
-  country = "Spain" ;
-  population = 47;
-  capitalCity = "Madrid";
-
-  console.log(country + ' ' + "has a" + " " + population + " million people and its capital city is" + capitalCity);
+  sentence = country + ' ' + "has a" + " " + population + " million people and its capital city is " + capitalCity;
+  console.log(sentence);
 } 
 
-
-countryInfo();
-
+countryInfo("Spain", 47, "Madrid")
+countryInfo("Israel", 8, "Jerusalem");
+countryInfo("Mexico", 126, "Mexico City");
+countryInfo("United Kingdom", 67, "London");
