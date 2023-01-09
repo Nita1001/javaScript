@@ -32,7 +32,7 @@ Submit the file to Hive
 
 // From function expressions to IIFE functions.
 (function squareRoot(a){
-  console.log(Math.sqrt(a))
+  Math.sqrt(a)
 })()
 
 (function randomNumbers (a, b) {
