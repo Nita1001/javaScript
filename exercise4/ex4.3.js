@@ -24,27 +24,72 @@ const averageScore = score =>{
 }
 
 const whoWon = winner => {
-  if(johnsTeamAvgScore > mikesTeamAvgScore)
+  if((johnsTeamAvgScore > mikesTeamAvgScore) && (johnsTeamAvgScore > marysTeamAvgScore))
   {
     console.log("Johns Team Won!");
   }
-  else if(mikesTeamAvgScore > johnsTeamAvgScore)
+  else if((mikesTeamAvgScore > johnsTeamAvgScore) && (mikesTeamAvgScore > marysTeamAvgScore))
   {
     console.log("Mikes Team Won!");
   }
-  else 
+  else if((marysTeamAvgScore > johnsTeamAvgScore) && (marysTeamAvgScore > mikesTeamAvgScore))
   {
-    console.log("It's a Tie!");
+    console.log("Marys Team Won!");
+  }
+  else if((marysTeamAvgScore == mikesTeamAvgScore) || (marysTeamAvgScore == johnsTeamAvgScore) || (johnsTeamAvgScore == mikesTeamAvgScore))
+  {
+    if((marysTeamAvgScore == mikesTeamAvgScore))
+    {
+      if(!(marysTeamAvgScore == johnsTeamAvgScore))
+      console.log("It's a Tie between: mary and mike!");
+      else console.log("It's a triple Tie!")
+    }
+    else if((marysTeamAvgScore == johnsTeamAvgScore ))
+    {
+      if( !(marysTeamAvgScore == mikesTeamAvgScore))
+        console.log("It's a Tie between: mary and john!");
+      else console.log("It's a triple Tie!")
+      }
+    else if((johnsTeamAvgScore == mikesTeamAvgScore))
+    {
+      if( !(marysTeamAvgScore == johnsTeamAvgScore)) 
+      console.log("It's a Tie between: john and mike!");
+      else console.log("It's a triple Tie!")
+    }
   }
 }
 
+
+
+
+let marysTeamScore = 97 + 134 + 105;
 let johnsTeamScore = 89 + 120 + 103;
 let mikesTeamScore = 116 + 94 + 123;
+let marysTeamAvgScore = averageScore(marysTeamScore);
 let johnsTeamAvgScore = averageScore(johnsTeamScore);
 let mikesTeamAvgScore =  averageScore(mikesTeamScore);
 whoWon();
-johnsTeamScore = 678;
+marysTeamAvgScore = 677;
+johnsTeamScore = 668;
 mikesTeamScore = 677;
+marysTeamAvgScore = averageScore(marysTeamScore);
 johnsTeamAvgScore = averageScore(johnsTeamScore);
 mikesTeamAvgScore =  averageScore(mikesTeamScore);
 whoWon();
+marysTeamAvgScore = 698;
+johnsTeamScore = 698;
+mikesTeamScore = 668;
+marysTeamAvgScore = averageScore(marysTeamScore);
+johnsTeamAvgScore = averageScore(johnsTeamScore);
+mikesTeamAvgScore =  averageScore(mikesTeamScore);
+whoWon();
+marysTeamScore = 698;
+johnsTeamScore = 598;
+mikesTeamScore = 698;
+marysTeamAvgScore = averageScore(marysTeamScore);
+johnsTeamAvgScore = averageScore(johnsTeamScore);
+mikesTeamAvgScore =  averageScore(mikesTeamScore);
+whoWon();
+
+
+
