@@ -15,7 +15,9 @@ Submit the file to Hive
   const welcome = welcome => 'Welcome to Appleseeds Bootcamp!';
   console.log(welcome());
 
-  const welcome2 = welcome => {return 'Welcome to Appleseeds Bootcamp!'};
+  const welcome2 = welcome => {
+    return 'Welcome to Appleseeds Bootcamp!';
+  }
   console.log(welcome2());
 
   const power = a => result = Math.pow(a, 2);
