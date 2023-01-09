@@ -25,7 +25,6 @@ function percentageOfWorld1(population)
 let chinaPopulation = percentageOfWorld1(1440.0);
 let israelPopulation = percentageOfWorld1(9.364);
 let unitedKingdomPopulation = percentageOfWorld1(67.33);
-
 console.log(`China has 1.412 billion  people, so it's about ${chinaPopulation}% of the world population`);
 console.log(`Israel has 9.364 million people, so it's about ${israelPopulation}% of the world population`);
 console.log(`United Kingdom has 67.33 million people, so it's about ${unitedKingdomPopulation}% of the world population`);
