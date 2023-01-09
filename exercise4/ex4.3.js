@@ -30,7 +30,7 @@ const whoWon = winner => {
   }
   else if(mikesTeamAvgScore > johnsTeamAvgScore)
   {
-    console.log("Mikes Team Won");
+    console.log("Mikes Team Won!");
   }
   else 
   {
@@ -40,11 +40,11 @@ const whoWon = winner => {
 
 let johnsTeamScore = 89 + 120 + 103;
 let mikesTeamScore = 116 + 94 + 123;
-let johnsTeamAvgScore = averageScore(jhonsTeamScore);
+let johnsTeamAvgScore = averageScore(johnsTeamScore);
 let mikesTeamAvgScore =  averageScore(mikesTeamScore);
-
+whoWon();
 johnsTeamScore = 678;
 mikesTeamScore = 677;
 johnsTeamAvgScore = averageScore(johnsTeamScore);
 mikesTeamAvgScore =  averageScore(mikesTeamScore);
-
+whoWon();
