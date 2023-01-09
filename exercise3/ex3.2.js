@@ -33,8 +33,9 @@ Submit the file to Hive
 // From function expressions to IIFE functions.
 (function squareRoot(a){
   Math.sqrt(a)
-})()
+})();
 
 (function randomNumbers (a, b) {
   Math.random() * (a - b) + b;
-})()
+})();
+
