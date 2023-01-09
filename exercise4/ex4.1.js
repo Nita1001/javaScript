@@ -33,7 +33,7 @@ else{
 
 // 7. Answer: the typeof is different, one is a number the other is string. 
 console.log(typeof(1));
-console.log(typeof(numSiblings));
+console.log(typeof(+numSiblings));
 // 8. answer: we should use the === operator and type conversion to avoid mistakes,
 // because the original data type was not set or recognized, or so that proper data analysis can be performed
 
