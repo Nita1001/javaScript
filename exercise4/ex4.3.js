@@ -36,31 +36,26 @@ const whoWon = winner => {
   {
     console.log("Marys Team Won!");
   }
-  else if((marysTeamAvgScore == mikesTeamAvgScore) || (marysTeamAvgScore == johnsTeamAvgScore) || (johnsTeamAvgScore == mikesTeamAvgScore))
+  else 
   {
-    if((marysTeamAvgScore == mikesTeamAvgScore))
+    if((marysTeamAvgScore == mikesTeamAvgScore) && !(marysTeamAvgScore == johnsTeamAvgScore))
     {
-      if(!(marysTeamAvgScore == johnsTeamAvgScore))
       console.log("It's a Tie between: mary and mike!");
-      else console.log("It's a triple Tie!")
     }
-    else if((marysTeamAvgScore == johnsTeamAvgScore ))
+    else if((marysTeamAvgScore == johnsTeamAvgScore ) && !(marysTeamAvgScore == mikesTeamAvgScore))
     {
-      if( !(marysTeamAvgScore == mikesTeamAvgScore))
-        console.log("It's a Tie between: mary and john!");
-      else console.log("It's a triple Tie!")
-      }
-    else if((johnsTeamAvgScore == mikesTeamAvgScore))
+      console.log("It's a Tie between: mary and john!");
+    }
+    else if((johnsTeamAvgScore == mikesTeamAvgScore) && !(marysTeamAvgScore == johnsTeamAvgScore))
     {
-      if( !(marysTeamAvgScore == johnsTeamAvgScore)) 
       console.log("It's a Tie between: john and mike!");
-      else console.log("It's a triple Tie!")
+    }
+    else if (marysTeamAvgScore == johnsTeamAvgScore && marysTeamAvgScore == mikesTeamAvgScore )
+    {
+      console.log("It's a triple Tie!");
     }
   }
 }
-
-
-
 
 let marysTeamScore = 97 + 134 + 105;
 let johnsTeamScore = 89 + 120 + 103;
@@ -83,9 +78,9 @@ marysTeamAvgScore = averageScore(marysTeamScore);
 johnsTeamAvgScore = averageScore(johnsTeamScore);
 mikesTeamAvgScore =  averageScore(mikesTeamScore);
 whoWon();
-marysTeamScore = 698;
+marysTeamScore = 598;
 johnsTeamScore = 598;
-mikesTeamScore = 698;
+mikesTeamScore = 198;
 marysTeamAvgScore = averageScore(marysTeamScore);
 johnsTeamAvgScore = averageScore(johnsTeamScore);
 mikesTeamAvgScore =  averageScore(mikesTeamScore);
