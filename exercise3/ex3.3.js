@@ -22,19 +22,19 @@ function percentageOfWorld1(population)
   return ((population / 7900)* 100);
 }
 
-let chinaPopulation = percentageOfWorld1(1.44);
+let chinaPopulation = percentageOfWorld1(1440.0);
 let israelPopulation = percentageOfWorld1(9.364);
 let unitedKingdomPopulation = percentageOfWorld1(67.33);
 
-console.log("China has 1.412 billion  people, so it\'s about" + " " + chinaPopulation * 1000 + " " + "% of the world population.");
-console.log("Israel has 9.364 million people, so it\'s about" + " " + israelPopulation + " " + "% of the world population.");
-console.log("United Kingdom has 67.33 million people, so it\'s about" + " " + unitedKingdomPopulation  + " " + "% of the world population.");
+console.log(`China has 1.412 billion  people, so it's about ${chinaPopulation}% of the world population`);
+console.log(`Israel has 9.364 million people, so it's about ${israelPopulation}% of the world population`);
+console.log(`United Kingdom has 67.33 million people, so it's about ${unitedKingdomPopulation}% of the world population`);
 
 
 const percentageOfWorld2 = population => (population /7900) * 100; 
-let chinaPopulation2 = percentageOfWorld2(1.44);
+let chinaPopulation2 = percentageOfWorld2(1440);
 let israelPopulation2 = percentageOfWorld2(9.364);
 let unitedKingdomPopulation2 = percentageOfWorld2(67.33);
-console.log("China has 1.412 billion  people, so it\'s about" + " " + chinaPopulation2 * 1000 + " " + "% of the world population.");
-console.log("Israel has 9.364 million people, so it\'s about" + " " + israelPopulation2 + " " + "% of the world population.");
-console.log("United Kingdom has 67.33 million people, so it\'s about" + " " + unitedKingdomPopulation2  + " " + "% of the world population.");
+console.log(`China has 1.412 billion  people, so it's about ${chinaPopulation2}% of the world population`);
+console.log(`Israel has 9.364 million people, so it's about ${israelPopulation2}% of the world population`);
+console.log(`United Kingdom has 67.33 million people, so it's about ${unitedKingdomPopulation2}% of the world population`);
