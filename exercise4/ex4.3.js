@@ -19,22 +19,32 @@ winners, keeping in mind there might be draws.
 
 const averageScore = score =>{
   // 3 games total 
-  let avgScore = score / 3;
+  const avgScore = score / 3;
+  return score;
 }
-let jhonsTeamScore = 89 + 120 + 103;
+
+const whoWon = winner => {
+  if(johnsTeamAvgScore > mikesTeamAvgScore)
+  {
+    console.log("Johns Team Won!");
+  }
+  else if(mikesTeamAvgScore > johnsTeamAvgScore)
+  {
+    console.log("Mikes Team Won");
+  }
+  else 
+  {
+    console.log("It's a Tie!");
+  }
+}
+
+let johnsTeamScore = 89 + 120 + 103;
 let mikesTeamScore = 116 + 94 + 123;
-let jhonsTeamAvgScore = averageScore(jhonsTeamScore);
+let johnsTeamAvgScore = averageScore(jhonsTeamScore);
 let mikesTeamAvgScore =  averageScore(mikesTeamScore);
 
-if(jhonsTeamAvgScore > mikesTeamAvgScore)
-{
-  console.log("Jhons Team Won!");
-}
-else if(mikesTeamAvgScore > jhonsTeamAvgScore)
-{
-  console.log("Mikes Team Won");
-}
-else
-{
-  console.log("It/'s a Tie!");
-}
+johnsTeamScore = 678;
+mikesTeamScore = 677;
+johnsTeamAvgScore = averageScore(johnsTeamScore);
+mikesTeamAvgScore =  averageScore(mikesTeamScore);
+
