@@ -10,14 +10,18 @@ Example of numbers between 1 to 18:
 */
 
 const printNum = num => {
-
   if(num == 0)
   {
     return;
   }
-  console.log(num)
+  if(num % 7 == 0){
+    console.log("BOOM");
+  }
+  else{ 
+    console.log(num);
+  }
   return printNum(num - 1);
 }
-let num = 4;
+let num = 10;
 printNum(num);
 
