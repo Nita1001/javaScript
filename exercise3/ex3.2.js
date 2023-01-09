@@ -29,7 +29,10 @@ Submit the file to Hive
   console.log(power2(2));
 
 // From function expressions to IIFE functions.
+(function squareRoot(a){
+  console.log(Math.sqrt(a))
+})()
 
-(function squareRoot(a){ console.log(Math.sqrt(a))})();
-
-(function randomNumbers (a, b) {Math.random() * (a - b) + b;})()
+(function randomNumbers (a, b) {
+  Math.random() * (a - b) + b;
+})()
