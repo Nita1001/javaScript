@@ -3,8 +3,7 @@
 const people = ["Greg", "Mary", "Devon", "James"];
 // 1. Using a loop, iterate through this array and console.log all
 // of the people.
-for(let i = 0; i < people.length; i++)
-{
+for(let i = 0; i < people.length; i++){
   console.log(people[i]);
 }
 // 2. Write the command to remove "Greg" from the array.
@@ -54,4 +53,3 @@ console.log(people);
 // to the people array concatenated with the string of "Bob".
 let withBob = people.concat('Bob');
 console.log(withBob);
-
