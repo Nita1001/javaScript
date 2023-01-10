@@ -34,5 +34,5 @@ switch(color.toLowerCase()){
 }
 }
 
-let color = ['Yellow', 'pinK', 'oraNge','blue', 'purplE', 'brown', 'other'];
+let color = ['Yellow', 'pINK', 'oRaNge','BLUE', 'purplE', 'brown', 'other'];
 console.log(checkColor(color[6]));
