@@ -9,3 +9,30 @@ function “dark color”.
 Note:
 It shouldn’t be case sensitive */
 
+const checkColor = color =>{
+switch(color.toLowerCase()){
+  case 'yellow':
+    return "light color";
+    break;
+  case 'pink':
+    return "light color";
+    break;
+  case 'orange':
+    return "light color";
+    break;
+  case 'blue':
+    return "dark color";
+    break;
+  case 'purple':
+    return "dark color";
+    break;
+  case 'brown':
+    return "dark color";
+    break;
+  default: 
+  return "Unknown color";
+}
+}
+
+let color = ['Yellow', 'pinK', 'oraNge','blue', 'purplE', 'brown', 'other'];
+console.log(checkColor(color[6]));
