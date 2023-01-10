@@ -10,7 +10,7 @@ Example of numbers between 1 to 18:
 */
 
 const printNum = (num) => {
-    if(num === 18){ // Stop condition
+    if(num > 18){ // Stop condition
       return;
     } else if (num % 7 === 0 && num.toString().includes("7")) {
       console.log("BOOM-BOOM");
