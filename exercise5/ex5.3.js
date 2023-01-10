@@ -34,10 +34,10 @@ const checkForCapital = (password) => {
 }
 
 const validateWithTernary2 = (password) => {
-  return password.length >= 7 && checkForCapital(password) ? 'Very Strong': password.length >= 7 ? 'Strong': 'Weak'
+  return password.length >= 7 && checkForCapital(password) ? 'VeryStrong': password.length >= 7 ? 'Strong': 'Weak';
 }
 
-let password = '1593A779';
+let password = '159c9779';
 console.log(password.length);
 let checkPass = validateWithTernary2(password);
 console.log(checkPass);
