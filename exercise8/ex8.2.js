@@ -20,7 +20,9 @@ const myCountry = {
   population: '6',
   neighbors: ['Norway', 'Russia', 'Sweden'],
   describe() { 
-    const {country, capital, language, population, neighbors} = this;
+    const {
+      country, capital, language, population, neighbors
+    } = this;
     console.log(`${country} has ${population} million people, their mother tongue is ${language},
 they have ${neighbors.length} neighbouring countries and a capital called ${capital}`);
   },
