@@ -7,7 +7,13 @@
 
 const noDuplicates = (array) =>{
   let newArray = [];
-
+  for(let element of array){
+    if(newArray.indexOf(element) === -1)
+    {
+      newArray.push(element);
+    }
+  }
+  return newArray;
 }
 
 const duplicatedArr = [3, 4, 4, 3, 6, 3];
