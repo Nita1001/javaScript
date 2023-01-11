@@ -57,12 +57,12 @@ const bookUtils = {
     return (book1.publisher.name === book2.publisher.name) && (book1.publisher.location === book2.publisher.location) ? true : false;
   }
 };
-// console.log(bookUtils.getFirstPublished(book1, book2));
-// bookUtils.setNewEdition(book1, '2023');
-// console.log(book1.latestEdition);
-// bookUtils.setTranslation(book1,'English', 'Eric');
-// console.log(book1.translation.translator);
-// console.log(book1.translation.language);
+console.log(bookUtils.getFirstPublished(book1, book2));
+bookUtils.setNewEdition(book1, '2023');
+console.log(book1.latestEdition);
+bookUtils.setTranslation(book1,'English', 'Eric');
+console.log(book1.translation.translator);
+console.log(book1.translation.language);
 bookUtils.setPublisher(book1, 'Nita', 'Israel');
 bookUtils.setPublisher(book2, 'Nita', 'Israel');
 console.log(bookUtils.isSamePublisher(book1, book2));
