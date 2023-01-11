@@ -9,9 +9,12 @@ console.log(string.lastIndexOf("you"));
 
 let lastWord = 'you';
 let lastIndex = -1;
-// i want lastIndex to jump 1 index at a time, start from index 0, until the word is no more to be found.  
+/* I want lastIndex to jump 1 index at a time, starting from index 0
+/ until the word is no more to be found.*/ 
 while(true){
+  //so each time the word is found, increment it + 1
   let index = string.indexOf('you', lastIndex + 1);
+  //until indexOf returns -1, meaning it didn't find that word anymore 
   if(index == -1){
     break;
   }
