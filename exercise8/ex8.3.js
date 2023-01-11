@@ -21,8 +21,6 @@
 // 8. add to the bookUtils object a function isSamePublisher,
 // which receives 2 books and checks if the publisher name
 // and location are identical in the 2 books.
-
-
 const book1 = {
   name: 'Apple Pie', 
   author: 'Jack Draco', 
@@ -33,11 +31,15 @@ const book2 = {
   author: 'Marc Rama', 
   year: '2005'
 };
-const bookUtils = {
-  getFirstPublished(book1, book2){
-    const{
-      book1, book2
-    } = this;
 
+const bookUtils = {
+  getFirstPublished(bookOne, bookTwo){
+    return (bookOne.year > bookTwo.year) ? bookTwo.year : bookOne.year;
+  },
+  setNewEdition(book, year){
+    book.latestEdition = '2023';
+    console.log(book.latestEdition);
   }
 };
+console.log(bookUtils.getFirstPublished(book1, book2));
+bookUtils.setNewEdition(book1);
