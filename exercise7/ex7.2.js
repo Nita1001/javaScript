@@ -14,12 +14,11 @@ let lastIndex = -1;
 while(true){
   //so each time the word is found, increment it + 1
   let index = string.indexOf('you', lastIndex + 1);
-  //until indexOf returns -1, meaning it didn't find that word anymore 
+  //until indexOf returns -1, meaning it didn't find that word anymore.
   if(index == -1){
     break;
   }
   lastIndex = index;
 }
 console.log(lastIndex);
-
 /*Now just Waiting for my cookie :) */
