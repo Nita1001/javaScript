@@ -31,15 +31,38 @@ const book2 = {
   author: 'Marc Rama', 
   year: '2005'
 };
-
 const bookUtils = {
   getFirstPublished(bookOne, bookTwo){
     return (bookOne.year > bookTwo.year) ? bookTwo.year : bookOne.year;
   },
   setNewEdition(book, year){
-    book.latestEdition = '2023';
-    console.log(book.latestEdition);
+    book.latestEdition = year;
+  },
+  setLanguage(book, language){
+    book.language = language;
+  },
+  setTranslation(book, language, translator){
+    book.translation = {
+      translator: translator,
+      language: language
+    };
+  },
+  setPublisher(book, name, location){
+    book.publisher = {
+      name: name,
+      location: location
+    }
+  },
+  isSamePublisher(book1, book2){
+    return (book1.publisher.name === book2.publisher.name) && (book1.publisher.location === book2.publisher.location) ? true : false;
   }
 };
-console.log(bookUtils.getFirstPublished(book1, book2));
-bookUtils.setNewEdition(book1);
+// console.log(bookUtils.getFirstPublished(book1, book2));
+// bookUtils.setNewEdition(book1, '2023');
+// console.log(book1.latestEdition);
+// bookUtils.setTranslation(book1,'English', 'Eric');
+// console.log(book1.translation.translator);
+// console.log(book1.translation.language);
+bookUtils.setPublisher(book1, 'Nita', 'Israel');
+bookUtils.setPublisher(book2, 'Nita', 'Israel');
+console.log(bookUtils.isSamePublisher(book1, book2));
