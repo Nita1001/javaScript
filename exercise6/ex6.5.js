@@ -27,11 +27,10 @@ console.log(copyOfValues);
 console.log(values);
 // ● Create a copy of an array that will affect the original
 // array if modified.
-let values2 = ["Dolphin", 28];
-let copyCanModify = values2;
+let copyCanModify = values;
 console.log(copyCanModify);
 copyCanModify.splice(0, 2 ,"Banana", 30);
-console.log(values2);
+console.log(values);
 
 
 
