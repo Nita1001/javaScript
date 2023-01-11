@@ -30,7 +30,7 @@ console.log(values);
 let values2 = ["Dolphin", 28];
 let copyCanModify = values2;
 console.log(copyCanModify);
-copyCanModify.splice(0, 2 ,"Banana");
+copyCanModify.splice(0, 2 ,"Banana", 30);
 console.log(values2);
 
 
