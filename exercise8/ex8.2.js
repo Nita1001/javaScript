@@ -23,7 +23,11 @@ const myCountry = {
     const {country, capital, language, population, neighbors} = this;
     console.log(`${country} has ${population} million people, their mother tongue is ${language},
 they have ${neighbors.length} neighbouring countries and a capital called ${capital}`);
+  },
+  checkIsland(){
+    this.isIsland = (this.neighbors.length === 0)? true : false;
+    console.log(this.isIsland);
   }
 };
-
 myCountry.describe();
+myCountry.checkIsland();
