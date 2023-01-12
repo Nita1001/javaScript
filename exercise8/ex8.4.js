@@ -11,3 +11,12 @@
 // that it shouldn’t be case sensitive
 // Extra:
 // return the letter with the most occurrences as well
+const letterCount = (arr) => {
+  arr = arr.map(element => element.toLowerCase());
+  const countOfLetters = {};
+  
+  return countOfLetters;
+}
+const array = ["Hello", "Good Day", "Your Welcome", "hotdog", "hamburgers"];
+const lettersCountObj = letterCount(array);
+console.log(lettersCountObj);
