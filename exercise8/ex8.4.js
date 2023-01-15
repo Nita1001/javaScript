@@ -1,5 +1,3 @@
-
-
 // Create a function that takes one argument, an array.
 // Use this array:
 // const array = ["Hello", "Good Day", "Your
@@ -28,4 +26,3 @@ const letterCount = (arr) => {
   return object;
   }
 console.log(letterCount(newArr));
-
