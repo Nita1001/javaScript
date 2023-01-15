@@ -17,8 +17,10 @@ const compare = (str1, str2) => {
       }
     }
   }
-  if(matchOrnot.length > 0){  return matchOrnot;
-  }else{
+  if(matchOrnot.length > 0){
+    return matchOrnot;
+  } 
+  else {
     return false;
   }
 }
