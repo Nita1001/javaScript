@@ -6,8 +6,13 @@
 const print = (n) =>{
   let str = [];
   for(let col = 0; col < n ; col++){
-    for(let row = 0; row <= col; row++){
-      str +='#'
+    for(let row = 0; row < n; row++){
+      if(row > col)
+      {
+        str +=' ';
+      } else{
+        str +='#';
+      }
     }
     str +='\n';
   }
