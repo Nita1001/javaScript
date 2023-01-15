@@ -9,13 +9,21 @@ const food1 = ["Fries", "Ice-cream", "Pizza",
 // items that are the same. If none are the same return false.
 const compare = (str1, str2) => {
   let matchOrnot = [];
+
   let length = str1.length >= str2.length ? str1.length : str2.length;
+
   for(let i = 0; i < length; i++)
   {
     for(let j = 0; j < length; j++){
-      (str1[i] === str2[j])? matchOrnot.push(str2[j]): false;
+      if(str1[i] === str2[j]){
+        matchOrnot.push(str2[j]);
+      }
     }
   }
-  return matchOrnot;
+  if(matchOrnot.length > 0){
+    return matchOrnot;
+  } else{
+    return false;
+  }
 }
 console.log(compare(food, food1));
