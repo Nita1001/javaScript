@@ -1,3 +1,5 @@
+
+
 // Create a function that takes one argument, an array.
 // Use this array:
 // const array = ["Hello", "Good Day", "Your
@@ -11,12 +13,19 @@
 // that it shouldn’t be case sensitive
 // Extra:
 // return the letter with the most occurrences as well
-const letterCount = (arr) => {
-  arr = arr.map(element => element.toLowerCase());
-  const countOfLetters = {};
-  
-  return countOfLetters;
-}
 const array = ["Hello", "Good Day", "Your Welcome", "hotdog", "hamburgers"];
-const lettersCountObj = letterCount(array);
-console.log(lettersCountObj);
+let newArr = array.toString().toLowerCase().replace(/[, ]+/g, "").split('');
+const letterCount = (arr) => {
+  const object = {};
+  for(let i = 0; i < arr.length; i++)
+  {
+    if(object[arr[i]]){
+      object[arr[i]]++;
+    } else {
+      object[arr[i]] = 1;
+    }
+  }
+  return object;
+  }
+console.log(letterCount(newArr));
+
