@@ -6,14 +6,14 @@
 const print = (n) =>{
   let str = [];
   for(let col = 0; col < n ; col++){
-    for(let row = 0; row < col; row++){
+    for(let row = 0; row <= col; row++){
       str +='#'
     }
     str +='\n';
   }
   console.log(str);
 }
-let n = 5;
+let n = -5;
 (Math.sign(n) === -1) ? n *= -1 : false;
 print(n);
 // Note:
