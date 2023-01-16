@@ -51,11 +51,44 @@ console.log(showFirstAndLast(arr3));
 // the string. The key should be the vowel and the value
 // should be the count. e.g. {a:3, o:2,u:4}. Should not be
 // case-sensitive.
+let str = 'Fall down seven times, Stand up eight.';
+let obj = {};
+const vowelCount = (str) =>{
+  str = str.toLowerCase().split('');
+  str.forEach(function(element){
+    if(element === 'a' || element === 'e' || element === 'i' || element === 'o'){
+      obj[element] = 0;
+    }
+  })
+  str.forEach(function(element){
+    if(element === 'a' || element === 'e' || element === 'i' || element === 'o'){
+      obj[element] += 1;
+    }
+  })
+};
+console.log(obj);
 // 5. Write a function capitalize that takes a string as an
 // argument and will return the whole string capitalized.
+const capitalize = (str) => {
+  str = str.split(''); 
+  let newStr = str.map(function(element){
+    return element.toUpperCase();
+  })
+  return newStr.join('');
+}
+console.log(capitalize(str));
 // 6. Write a function called shiftLetters that takes a string as an
 // argument and return’s an encoded string with each letter
 // shifted down the alphabet by one.
+const shiftLetters = (str) =>{
+  str = str.split('');
+
+  
+}
+shiftLetters(str);
+
+//charcodeat & fromcharcode
+
 // 7. Create a function called swapCase that takes a string as
 // an argument and returns a string that every other word is
 // capitalized. (you can use the fifth’s exercise's function to
