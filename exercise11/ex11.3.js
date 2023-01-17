@@ -46,13 +46,13 @@ const data = [
 // Create separate functions for each question below:
 // 1. Create a function that returns all the names from the array.
 const returnNames = (arr) => arr.map((obj) => obj.name);
-// console.log((returnNames(data)));
+console.log((returnNames(data)));
 
 // 2. Create a function that returns all the objects that are born
 // before 1990.
 const returnValidBirthYear = (obj) =>
   obj.filter((obj) => Number(obj.birthday.split("-")[2]) < 1990);
-// console.log(returnValidBirthYear(data));
+console.log(returnValidBirthYear(data));
 
 // 3. Create a function that returns an object of all the different
 // foods from all the objects as the key and the number of
