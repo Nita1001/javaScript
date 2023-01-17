@@ -66,6 +66,7 @@ const vowelCount = (str) =>{
     }
   })
 };
+vowelCount(str);
 console.log(obj);
 // 5. Write a function capitalize that takes a string as an
 // argument and will return the whole string capitalized.
@@ -80,16 +81,33 @@ console.log(capitalize(str));
 // 6. Write a function called shiftLetters that takes a string as an
 // argument and return’s an encoded string with each letter
 // shifted down the alphabet by one.
+let newStr = [];
 const shiftLetters = (str) =>{
   str = str.split('');
-
-  
+  str.forEach(function(element){
+    newStr.push(String.fromCharCode(element.charCodeAt()+1));
+  })
+  return newStr;
 }
-shiftLetters(str);
-
-//charcodeat & fromcharcode
-
+console.log(shiftLetters(str));
 // 7. Create a function called swapCase that takes a string as
 // an argument and returns a string that every other word is
 // capitalized. (you can use the fifth’s exercise's function to
 // keep it dry)
+let str8 = 'Chocolate cake is okay';
+let newStr1 = [];
+const swapCase = (str) => {
+  str = str.split(' ');
+  let count = 0;
+  newStr1 = str.map(function(element){
+    if(count % 2 === 0){
+      count++;
+      return element;
+    } else{ 
+      count++;
+      return element.toUpperCase();
+    }
+  })
+}
+swapCase(str8);
+console.log(newStr1);
