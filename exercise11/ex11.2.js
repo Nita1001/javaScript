@@ -105,7 +105,7 @@ const swapCase = (str) => {
       return element;
     } else{ 
       count++;
-      return element.toUpperCase();
+      return capitalize(element);
     }
   })
 }
