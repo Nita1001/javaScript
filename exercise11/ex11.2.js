@@ -98,13 +98,10 @@ let str8 = 'Chocolate cake is okay';
 let newStr1 = [];
 const swapCase = (str) => {
   str = str.split(' ');
-  let count = 0;
-  newStr1 = str.map(function(element){
-    if(count % 2 === 0){
-      count++;
+  newStr1 = str.map(function(element, index){
+    if(index % 2 === 0){
       return element;
     } else{ 
-      count++;
       return capitalize(element);
     }
   })
