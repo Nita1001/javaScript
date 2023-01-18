@@ -46,11 +46,8 @@ console.log(getCandy(candyStore, "777"));
 // should add the candy price to the cashRegister, and
 // decrease the amount property of the relevant candy.
 function buy(candyStore, id) {
-
-  const price =  getPrice(candyStore, id);
-  const candy = getCandy(candyStore, id);
-  candyStore.cashRegister -= price;
-  candy.amount -= 1;
+  candyStore.cashRegister -=  getPrice(candyStore, id);
+  getCandy(candyStore, id).amount -= 1;
 }
 buy(candyStore, '777')
 console.log(candyStore);
