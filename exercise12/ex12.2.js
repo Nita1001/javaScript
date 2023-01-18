@@ -36,10 +36,21 @@ console.log(getPrice(candyStore, "5hd7y"));
 // The function should add a new candy to the candy
 // list in candyStore with a default amount of 1. The
 // function will not return anything.
-function addCandy(candyStore, id, name, price) {
-  
+function addCandy(candyStore, id, name, price, amount = 1) {
+  const newObj = {'name': name, 'id': id, 'price': price, 'amount': amount };
+  candyStore.candies.push(newObj);
 }
+addCandy(candyStore, '777','donuts', 34);
+console.log(getCandy(candyStore, "777"));
 // 4. Implement the following buy function: The function
 // should add the candy price to the cashRegister, and
 // decrease the amount property of the relevant candy.
-function buy(candyStore, id) {}
+function buy(candyStore, id) {
+
+  const price =  getPrice(candyStore, id);
+  const candy = getCandy(candyStore, id);
+  candyStore.cashRegister -= price;
+  candy.amount -= 1;
+}
+buy(candyStore, '777')
+console.log(candyStore);
