@@ -3,7 +3,7 @@
 // What is wrong with this code?
 // 1. First, find the line that contains the problem. Write it down. //?? line 12 
 // 2. Which debug method did you use to find the bug? //?? REPL
-// 3. Explain the bug in your own words. //?? counters was incremented 3 times but the value wasn't stored each iteration.
+// 3. Explain the bug in your own words. //?? counter was incremented 3 times but the value wasn't stored in each iteration.
 // 4. Fix the code and submit it all.
 function countOccurrences(str, char) {
     let counter = 0;
