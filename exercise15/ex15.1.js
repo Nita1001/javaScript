@@ -4,7 +4,7 @@
 // 1. First, find the line that contains the problem. Write it down. //?? line 10 & line 9 
 // 2. Which debug method did you use to find the bug? //?? REPL
 // 3. Explain the bug in your own words.
-//?? first of all array is not defined correctly, there is no comma betwin the arrays and second sum variable is const.
+//?? first of all array is not defined correctly, there is no comma between the arrays and second sum variable is const.
 // 4. Fix the code and submit it all.
 function getSum(arr1, arr2) {
     let sum = 0;
