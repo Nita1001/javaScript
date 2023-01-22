@@ -16,64 +16,87 @@
 // doesn’t exist in their array of subjects.
 // 4. Create a new method for anything you want.
 const school = {
-  teachers: [
-    {
-      id: 1,
-      name: "Pinchas",
-      subjects: ["chemistry", "biology", "physics"],
-      students: [],
-      capacityLeft: 3,
+    teachers: [
+        {
+            id: 1,
+            name: "Pinchas",
+            subjects: ["chemistry", "biology", "physics"],
+            students: [],
+            capacityLeft: 3,
+        },
+        {
+            id: 2,
+            name: "Williams",
+            subjects: ["history", "ethics"],
+            students: [],
+            capacityLeft: 3,
+        },
+    ],
+    students: [
+        {
+            id: 10,
+            name: "Jennifer",
+            age: 20,
+        },
+        {
+            id: 11,
+            name: "Howard",
+            age: 23,
+        },
+        {
+            id: 12,
+            name: "Old-Timmy",
+            age: 86,
+        },
+        {
+            id: 13,
+            name: "Houston",
+            age: 21,
+        },
+    ],
+    findPerson: function (type, id) {
+        return this[type].filter((element) => {
+            return element.id === id;
+        });
     },
-    {
-      id: 2,
-      name: "Williams",
-      subjects: ["history", "ethics"],
-      students: [],
-      capacityLeft: 3,
+    assignStudent: function (id, subject) {
+        this.teachers.forEach((teacher) => {
+            const currStudentName = this.findPerson("students", id)[0].name;
+            if (
+                teacher.subjects.includes(subject) &&
+                teacher.capacityLeft > 0
+            ) {
+                teacher.students.push(currStudentName);
+                teacher.capacityLeft--;
+            } else if (teacher.capacityLeft === 0) {
+                console.log(
+                    `Sorry ${currStudentName}, no available teachers left.`
+                );
+            }
+        });
     },
-  ],
-  students: [
-    {
-      id: 10,
-      name: "Jennifer",
-      age: 20,
+    assignTeachersSubject: function (id, subject) {
+        const teacher = this.teachers.find((teacher) => {
+            return teacher.id === id;
+        });
+        if (teacher && !teacher.subjects.includes(subject)) {
+            teacher.subjects.push(subject);
+        }
     },
-    {
-      id: 11,
-      name: "Howard",
-      age: 23,
+    addBirthDay: function (type, id, birthDay) {
+        this[type].filter((element) => {
+            if (element.id === id) element["BirthDay"] = birthDay;
+        });
     },
-    {
-      id: 12,
-      name: "Old-Timmy",
-      age: 86,
-    },
-    {
-      id: 13,
-      name: "Houston",
-      age: 21,
-    },
-  ],
-  findPerson: function (type, id) {
-    return this[type].filter((element) => {
-      return element.id === id;
-    });
-  },
-  assignStudent: function (id, subject) {
-      this.teachers.forEach((t) => {
-      if (t.subjects.includes(subject) && t.capacityLeft > 0){
-        t.students.push(this.findPerson('students',id)[0].name);
-        t.capacityLeft--;
-      } else if(t.capacityLeft === 0){
-        console.log(`Sorry ${this.findPerson('students', id)[0].name}, no available teachers left.`);
-      }
-    });
-  },
 };
 
-console.log(school.findPerson("teachers", 2 ));
-school.assignStudent(10, 'ethics');
-school.assignStudent(11, 'ethics');
-school.assignStudent(12, 'ethics');
 console.log(school.findPerson("teachers", 2));
-school.assignStudent(13, 'ethics');
+school.assignStudent(10, "ethics");
+school.assignStudent(11, "ethics");
+school.assignStudent(12, "ethics");
+console.log(school.findPerson("teachers", 2));
+school.assignStudent(13, "ethics");
+school.assignTeachersSubject(1, "ethics");
+console.log(school.findPerson("teachers", 1));
+school.addBirthDay("students", 12, "Long Time ago");
+console.log(school.findPerson("students", 12));
