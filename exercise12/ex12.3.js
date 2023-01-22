@@ -98,5 +98,6 @@ console.log(school.findPerson("teachers", 2));
 school.assignStudent(13, "ethics");
 school.assignTeachersSubject(1, "ethics");
 console.log(school.findPerson("teachers", 1));
+console.log(school.findPerson("students", 12));
 school.addBirthDay("students", 12, "Long Time ago");
 console.log(school.findPerson("students", 12));
