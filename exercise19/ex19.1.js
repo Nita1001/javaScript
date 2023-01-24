@@ -7,7 +7,7 @@
 // 2. Add another subtitle with the text “subtitle 4”
 // 3. Delete the last <li> element from the list.
 // 4. Change the <title> element text to “Master Of The Dom”.
-// 5. Change the text of the <p> element ot something else of
+// 5. Change the text of the <p> element to something else of
 // your
 // Note:
 // On the next page, you have the HTML code
@@ -28,4 +28,5 @@ removeLi[removeLi.length - 1].remove();
 const changePageTitle = document.querySelector('title');
 changePageTitle.textContent = 'Master Of The Dom';
 //5
-
+const changeP = document.querySelector('p');
+changeP.innerText = 'sieben Mal herunterfallen, Acht aufstehen.';
