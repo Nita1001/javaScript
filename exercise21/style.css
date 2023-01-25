@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+div.input-field{
+    display: flex;
+    font-size: 4rem;
+    margin-left: 20rem;
+    margin-top: 20rem;
+}
+input{
+    text-align: center;
+}
+p{
+    margin-left: 2rem;
+}
