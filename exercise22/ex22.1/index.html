@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="signup-form" class="container">
+        <div class="user-form">
+            <h3>Name</h3>
+            <input type="text" id="users-name" placeholder="Name">
+            <h3>Age</h3>
+            <input type="text" id="users-age" placeholder="Age">
+            <h3>Email</h3>
+            <input type="email" name="email" id="users-email">
+            <button id='submit-form' type="submit">Submit</button>
+        </div>
+        <div class="confirm-data">
+            <h2>Please confirm if data is correct</h2>
+            <h3 id="name-data"></h3>
+            <h3 id="age-data"></h3>
+            <h3 id="email-data"></h3>
+            <button id='confirm-form' type="submit">Confirm</button>
+            <button id='incorrect' type="submit">Change</button>
+        </div>
+    </form>
+
+</body>
+<script src="./ex22.1.js"></script>
+</html>

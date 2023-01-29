@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    display: flex;
+}
+.user-form{
+    border: solid black;
+    width: max-content;
+    height: max-content;
+}
+input{
+    width: 8rem;
+}
+
+.hide{
+    visibility: hidden;
+}
+.confirm-data{
+    background-color: bisque;
+    width: max-content;
+    height: max-content;
+    margin: 2rem;
+}
+h3{
+    margin-bottom: 4px;
+}
+button{
+    width: 8rem;
+}
