@@ -29,3 +29,16 @@ body {
 .letter img{
     width: 10%;
 }
+.hide{
+    visibility: hidden;
+}
+.guessed{
+    margin-top: 2rem;
+    color: green;
+    opacity: 0.4;
+}
+.wrong-guess{
+    margin-top: 2rem;
+    color: rgb(203, 17, 17);
+    opacity: 0.4;
+}
