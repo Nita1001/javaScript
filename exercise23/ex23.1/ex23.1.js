@@ -13,8 +13,8 @@ console.log(`Hello ${this.name}`);
 },
 };
 myObj.greet();
-Question 3:
-In your own words what will this point to and why?
+// Question 3:
+//In your own words what will this point to and why?
 const myFuncDec = function () {
 console.log(this);
 };
