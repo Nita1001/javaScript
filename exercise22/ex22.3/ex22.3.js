@@ -26,14 +26,14 @@ function showLetter(){
     hideQuestion.classList.add('hide');
     showCorrectLetter.classList.remove('hide');
 }
+
 function correct(){
+    correctGuess.classList.remove("hide");
     showLetter();
     setTimeout(() => {
         wouldYou.classList.remove("hide");
         playAgainBtn.classList.remove("hide");
     }, 1000);
-    wrongGuess.classList.add("hide");
-    correctGuess.classList.remove("hide");
     endGame = true;
 }
 
@@ -42,6 +42,7 @@ inputLetter.addEventListener("keypress", (ev) => {
     {
         console.log(randomLetter);
         if (ev.key === randomLetter) {
+            wrongGuess.classList.add("hide");
             correct();
         } else {
             wrongGuess.classList.remove("hide");
