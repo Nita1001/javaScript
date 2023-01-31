@@ -8,7 +8,10 @@ const gameBoard = document.querySelector('#board');
 
 function main(currentTime) {
     if(gameOver){
-        alert('GAME OVER');
+       if(confirm('Game Over, Press ok to restart')) {
+        window.location = '/';
+       }
+       return;
     }
 
     window.requestAnimationFrame(main); 

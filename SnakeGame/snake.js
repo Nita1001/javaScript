@@ -9,7 +9,7 @@ export function update() {
 
     const inputDirection = getInputDirection();
     for(let i = snakeBody.length - 2 ; i >= 0; i--){
-        snakeBody[i + 1] = {...snakeBody[i]}
+        snakeBody[i + 1] = { ...snakeBody[i] }
     }
 
     snakeBody[0].x += inputDirection.x;
@@ -33,7 +33,7 @@ export function expandSnake(amount) {
 export function onSnake(position, { ignoreHead = false } = {}) {
     return snakeBody.some((segment, index) => {
         if(ignoreHead && index === 0 ) return false;
-        equalPositions(segment, position)
+        return equalPositions(segment, position);
     })
 }
 
