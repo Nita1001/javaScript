@@ -18,8 +18,8 @@ function main(currentTime) {
 window.requestAnimationFrame(main);
 
 function update() {
-    updateSnake();
     updateApple();
+    updateSnake();
 }
 
 function draw() {
