@@ -26,23 +26,21 @@ export function draw(gameBoard) {
     })
 }
 
-export function expandSnake() {
+export function expandSnake(amount) {
     newSegments += amount;
 }
 
 export function onSnake(position) {
-    return snakeBody.some(segment => {
-        return equalPositions(segment, position);
-    })
+    return snakeBody.some(segment => equalPositions(segment, position))
 }
 
 function equalPositions(p1, p2){
-    return p1.x === p2.x && p1.y === p2.y;
+    return (p1.x === p2.x) && (p1.y === p2.y);
 }
 
 function addSegments() {
     for(let i = 0; i < newSegments; i++){
-        snakeBody[snakeBody.length] = {...snakeBody[snakeBody.length - 1]};
+        snakeBody.push[{...snakeBody[snakeBody.length - 1]}];
     }
     newSegments = 0;
 }

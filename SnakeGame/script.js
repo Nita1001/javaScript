@@ -19,6 +19,7 @@ window.requestAnimationFrame(main);
 
 function update() {
     updateSnake();
+    updateApple();
 }
 
 function draw() {

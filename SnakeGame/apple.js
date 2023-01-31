@@ -1,3 +1,5 @@
+import {onSnake, expandSnake} from './snake.js'
+
 let apple = {x: 10, y: 1};
 const EXPANSION_RATE = 2;
 
