@@ -1,11 +1,29 @@
-div.container{
-    margin-left: 20rem;
-    margin-top: 10rem;
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
 }
+
 p{
     font-size: 20px;
+    color: white;
 }
 button{
-    width: 253px;
-    height: 50px;
+    margin-top: 1rem;
+    width: 5rem;
+    height: 2rem;
+}
+
+h1{
+    color: rgb(223, 83, 83);
+    font-size: medium;
+}
+
+.hide{
+    visibility: hidden;
 }
