@@ -5,9 +5,12 @@
 // choose!
 // You cannot change the printSuperPower function
 const storm = {
-// add code here
-}
+    // add code here
+    superPower: 'patience',
+};
 function printSuperPower() {
-console.log("my superpower is " +
-this.superPower);
+    console.log("my superpower is " + this.superPower);
 }
+
+const bindPrintStorm = printSuperPower.bind(storm);
+bindPrintStorm();
