@@ -37,7 +37,7 @@ document.querySelector(".element").addEventListener(() => {
     console.log(this);
 });
 // a. In your own words, what will this point to and why?
-//?/ answer: this will point to global scope, if we invoke it from global, because its an arrow function.
+//?/ answer: this will point to global scope, because were inside of an arrow function.
 // b. How can you fix this code?
-//??/ answer: change the arrow function to regular function or use bind 
+//??/ answer: change the arrow function to regular function or use bind method 
 
