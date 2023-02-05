@@ -12,11 +12,16 @@ const form = document.querySelector('#signup-form');
 const submitBtn = document.querySelector('#submit-form');
 const confirmBtn = document.querySelector('#confirm-form');
 const changeBtn = document.querySelector('#incorrect');
-formData = {};
+const nameData = document.querySelector('#name-data');
+const agrData = document.querySelector('#agr-data');
+const emailData = document.querySelector('#email-data');
 
 /// Functions
-const submit = () => {
-    alert('submit');
+function eventHandler(ev) {
+    ev.preventDefault();
+    nameData.innerText = usName.value,
+    agrData.innerText = usAge.value,
+    emailData.innerText = usEmail.value
 };
 const confirm = () => {
 
@@ -26,12 +31,6 @@ const changeForm = () => {
 };
 
 // EventListeners
-form.addEventListener('submit',  (ev) => {
-    console.log('Name', usName.value);
-    console.log('Age', usAge.value);
-    console.log('email', usEmail.value);
-    ev.preventDefault();
-})
-submitBtn.addEventListener('click', submit());
+form.addEventListener('submit',  eventHandler());
 changeBtn.addEventListener('click', changeForm());
 confirmBtn.addEventListener('click', confirm());
