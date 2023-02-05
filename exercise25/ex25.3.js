@@ -17,7 +17,7 @@ function printName() {
 function printHeroes(heroes, printFunc) {
     //add your code here
     heroes.forEach(hero => {
-        printFunc.call(hero, this.name);
+        printFunc.call(hero);
     });
 }
 printHeroes(superHeroes, printName);
