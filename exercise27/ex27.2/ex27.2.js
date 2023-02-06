@@ -13,17 +13,17 @@ const rejectedStr = [1, 'NoWay', 'NoWay'];
 const makeAllCaps = (str) => {
     return new Promise((resolve, reject) => {
 
-        console.log(str);
         let count = str.length;
         let condition = true;
+
         str.forEach(element => {
             console.log(element);
             if(typeof element !=  "string" ){
                  count--;
             }        
-            console.log(count);
         });
         (count < str.length)? condition = false: condition = true;
+
         if (condition === true) {
             const newStr = str.join(' ').toUpperCase();
             resolve({ status: newStr });
@@ -34,7 +34,6 @@ const makeAllCaps = (str) => {
 };
 
 const sortWords = (str) => {
-
     return new Promise((resolve, reject) => {
             const newStr = str.sort();
             resolve({ status: newStr });
@@ -48,7 +47,7 @@ makeAllCaps(str).then((res) => {
             console.log('NICE!!', result.status);
         });
 
-}).catch(() => { console.log('NOT'); });
+}).catch(() => { console.log(result.status); });
 
 
 
@@ -59,4 +58,4 @@ makeAllCaps(rejectedStr).then((res) => {
             console.log('NICE!!', result.status);
         });
 
-}).catch(() => { console.log('NOT'); });
+}).catch((result) => { console.log(result.status); });
