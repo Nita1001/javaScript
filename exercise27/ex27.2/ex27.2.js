@@ -18,25 +18,25 @@ const makeAllCaps = (str) => {
 
         str.forEach(element => {
             console.log(element);
-            if(typeof element !=  "string" ){
-                 count--;
-            }        
+            if (typeof element != "string") {
+                count--;
+            }
         });
-        (count < str.length)? condition = false: condition = true;
+        (count < str.length) ? condition = false : condition = true;
 
         if (condition === true) {
             const newStr = str.join(' ').toUpperCase();
             resolve({ status: newStr });
         } else {
-            reject({status: 'Error, array contains more than just strings.'});
+            reject({ status: 'Error, array contains more than just strings.' });
         }
     })
 };
 
 const sortWords = (str) => {
     return new Promise((resolve, reject) => {
-            const newStr = str.sort();
-            resolve({ status: newStr });
+        const newStr = str.sort();
+        resolve({ status: newStr });
     })
 }
 
@@ -48,8 +48,6 @@ makeAllCaps(str).then((res) => {
         });
 
 }).catch(() => { console.log(result.status); });
-
-
 
 makeAllCaps(rejectedStr).then((res) => {
 
