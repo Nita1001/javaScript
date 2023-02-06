@@ -15,7 +15,7 @@ const lessOrGrater = (num) => {
             reject();
         }
     })
-}
+};
 
 lessOrGrater(9).then(() => {console.log('resolved');}).catch(() => {console.log('rejected');});
 lessOrGrater(11).then(() => {console.log('resolved');}).catch(() => {console.log('rejected');});
