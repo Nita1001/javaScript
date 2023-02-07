@@ -35,3 +35,15 @@ getIDs()
 // The Task
 // Your task is to convert the consumed promise not to use .then
 // and .catch but to use the modern way using async and await.
+
+async function recipes(){
+    try{
+        const res = await getIDs();
+        const recipes = await getRecipe(res[2]);
+        console.log(recipes);
+    } catch (err){
+        console.log('Error status:', err);
+    }
+};
+
+recipes();
