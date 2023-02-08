@@ -4,8 +4,6 @@ async function data(){
         const data = await res.json();
         const res2 = await fetch("https://swapi.dev/api/planets/1/");
         const homePlanet = await res2.json();
-        console.log(homePlanet);
-        console.log(data);
         const obj = {};
         obj['Name'] = data.name;
         obj['Height'] = data.height;
