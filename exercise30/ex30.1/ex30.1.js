@@ -36,7 +36,7 @@ function createElement(data){
         const gotUsersRepo = data.public_repos;
         const gotUsersUrl = data.html_url;
         profile.innerHTML += `
-        <a href="${gotUsersUrl} target="_blank">
+        <a href="${gotUsersUrl}" target="_blank">
         <div class="card-container">
         <img id='profileImg' src=${gotUserAvatar} class='profilePic'>
         <h2>${gotUsersName}</h2>
