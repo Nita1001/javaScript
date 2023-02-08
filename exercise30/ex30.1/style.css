@@ -7,15 +7,25 @@
 .container{
     display: flex;
     align-items: baseline;
-    justify-content: flex-start;
-    flex-direction: column-reverse;
+    flex-direction: column;
     font-size: 2rem;
     margin-top: 2rem;
     margin-left: 2rem;
 }
 
+.cards-container{
+    display: flex;
+    font-size: larger;
+    flex-wrap: wrap;
+}
+
 .card-container{
+    display: flex;
+    flex-direction: column;
     margin-top: 2rem;
+    margin-right: 2rem;
+    font-size: larger;
+
 }
 
 .profilePic{
