@@ -9,30 +9,59 @@
 // When a user clicks on the card it will open a new page to
 // that user Github profile page
 const input = document.querySelector('#inputUserName');
-const profilePic = document.querySelector('#profilePic')
+const parent = document.querySelector('#profile-cards');
+let prevUserName = [];
+
+
+
 input.addEventListener('keypress', function (e) {
     if(e.key === 'Enter'){
-        const userName = e.target.value;
-        getText(userName, e);
+        if(prevUserName === '' || !(prevUserName.includes(e.target.value))){
+            const userName = e.target.value;
+            e.target.value = '';
+            getText(userName, e);
+            prevUserName.push(userName);
+        }
+        console.log('You already typed that user name.');
     }
 });
+
+function createElement(data){
+
+    const gotUserAvatar = data.avatar_url;
+    const gotUsersName = data.name;
+    const gotUsersRepo = data.public_repos;
+
+    // if(gotUserAvatar.ok && gotUsersName.ok && gotUsersRepo.ok ){
+        const profile = document.querySelector('#profile-cards');
+        profile.innerHTML += `
+        <div class="card-container">
+        <img id='profileImg' src=${gotUserAvatar} class='profilePic'>
+        <h2>${gotUsersName}</h2>
+        <h2>Public Repos: ${gotUsersRepo}</h2>
+        </div>
+        `;
+    // }
+}
+
+// function createOuterLink(data){
+          
+//     const profileImg = document.querySelector('#profileImg');
+//     profileImg.addEventListener('click', ()=>{
+
+
+//     })
+// }
 
 async function getText(userName, e){
     try{
         const res = await fetch(`https://api.github.com/users/${userName}`)
         const data = await res.json();
         console.log(data);
-        let output ='';
-        const gotUserAvatar = data.avatar_url;
-        const gotUsersName = data.name;
-        const gotUsersRepo = data.public_repos;
-        profilePic.innerHTML = `
-        <img src=${gotUserAvatar} class='profilePic'>
-        <h3>${gotUsersName}</h3>
-        <h3>Public Repos: ${gotUsersRepo}</h3>
-        `;
-        e.target.value = '';
+        createElement(data);
+        // createOuterLink(data);
     } catch(err) {
-        console.log(err);
+        console.log('Error: ',err);
+
     }
 }
