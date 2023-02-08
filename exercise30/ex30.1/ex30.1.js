@@ -16,42 +16,36 @@ let prevUserName = [];
 
 input.addEventListener('keypress', function (e) {
     if(e.key === 'Enter'){
-        if(prevUserName === '' || !(prevUserName.includes(e.target.value))){
+        if(!(prevUserName.includes(e.target.value))){
             const userName = e.target.value;
             e.target.value = '';
             getText(userName, e);
             prevUserName.push(userName);
         }
-        console.log('You already typed that user name.');
+        else{
+            console.log('You already typed that user name.');
+        }
     }
 });
 
 function createElement(data){
-
-    const gotUserAvatar = data.avatar_url;
-    const gotUsersName = data.name;
-    const gotUsersRepo = data.public_repos;
-
-    // if(gotUserAvatar.ok && gotUsersName.ok && gotUsersRepo.ok ){
+    if(!(data.message === 'Not Found')){
         const profile = document.querySelector('#profile-cards');
+        const gotUserAvatar = data.avatar_url;
+        const gotUsersName = data.name;
+        const gotUsersRepo = data.public_repos;
+        const gotUsersUrl = data.html_url;
         profile.innerHTML += `
+        <a href="${gotUsersUrl} target="_blank">
         <div class="card-container">
         <img id='profileImg' src=${gotUserAvatar} class='profilePic'>
         <h2>${gotUsersName}</h2>
         <h2>Public Repos: ${gotUsersRepo}</h2>
         </div>
+        </a> 
         `;
-    // }
+    }
 }
-
-// function createOuterLink(data){
-          
-//     const profileImg = document.querySelector('#profileImg');
-//     profileImg.addEventListener('click', ()=>{
-
-
-//     })
-// }
 
 async function getText(userName, e){
     try{
@@ -59,9 +53,7 @@ async function getText(userName, e){
         const data = await res.json();
         console.log(data);
         createElement(data);
-        // createOuterLink(data);
     } catch(err) {
         console.log('Error: ',err);
-
     }
 }

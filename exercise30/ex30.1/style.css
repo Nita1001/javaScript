@@ -11,6 +11,7 @@
     font-size: 2rem;
     margin-top: 2rem;
     margin-left: 2rem;
+
 }
 
 .cards-container{
@@ -18,14 +19,16 @@
     font-size: larger;
     flex-wrap: wrap;
 }
-
+a{
+    text-decoration: none;
+    color: black;
+}
 .card-container{
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
     margin-right: 2rem;
     font-size: larger;
-
 }
 
 .profilePic{
