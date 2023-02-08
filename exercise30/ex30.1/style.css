@@ -19,10 +19,7 @@
     font-size: larger;
     flex-wrap: wrap;
 }
-a{
-    text-decoration: none;
-    color: black;
-}
+
 .card-container{
     display: flex;
     flex-direction: column;
@@ -35,4 +32,9 @@ a{
     border-radius: 2rem;
     width: 14rem;
     height: 14rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

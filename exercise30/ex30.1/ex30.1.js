@@ -12,19 +12,21 @@ const input = document.querySelector('#inputUserName');
 const parent = document.querySelector('#profile-cards');
 let prevUserName = [];
 
-input.addEventListener('keypress', function (e) {
-    if(e.key === 'Enter'){
+input.addEventListener('keypress', handleInput);
+
+function handleInput(ev) {
+    if(ev.key === 'Enter'){
         if(!(prevUserName.includes(e.target.value))){
             const userName = e.target.value;
             e.target.value = '';
-            getText(userName, e);
             prevUserName.push(userName);
+            getText(userName);
         }
         else{
             console.log('You already typed that user name.');
         }
     }
-});
+}
 
 function createElement(data){
     if(!(data.message === 'Not Found')){
@@ -45,7 +47,7 @@ function createElement(data){
     }
 }
 
-async function getText(userName, e){
+async function getText(userName){
     try{
         const res = await fetch(`https://api.github.com/users/${userName}`)
         const data = await res.json();
