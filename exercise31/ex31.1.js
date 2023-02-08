@@ -9,8 +9,6 @@ async function data(){
         obj['Height'] = data.height;
         obj['Hair'] = data.hair_color;
         obj['Planet'] = {'Name': homePlanet.name, 'Population': homePlanet.population};
-        console.log(obj);
-
     } catch(err){
         console.log('Error status:', err);
     }
