@@ -16,9 +16,9 @@ input.addEventListener('keypress', handleInput);
 
 function handleInput(ev) {
     if(ev.key === 'Enter'){
-        if(!(prevUserName.includes(e.target.value))){
-            const userName = e.target.value;
-            e.target.value = '';
+        if(!(prevUserName.includes(ev.target.value))){
+            const userName = ev.target.value;
+            ev.target.value = '';
             prevUserName.push(userName);
             getText(userName);
         }
