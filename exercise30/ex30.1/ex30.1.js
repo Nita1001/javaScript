@@ -9,7 +9,7 @@
 // When a user clicks on the card it will open a new page to
 // that user Github profile page
 const input = document.querySelector('#inputUserName');
-const parent = document.querySelector('#profile-cards');
+const profile = document.querySelector('#profile-cards');
 let prevUserName = [];
 
 input.addEventListener('keypress', handleInput);
@@ -30,7 +30,6 @@ function handleInput(ev) {
 
 function createElement(data){
     if(!(data.message === 'Not Found')){
-        const profile = document.querySelector('#profile-cards');
         const gotUserAvatar = data.avatar_url;
         const gotUsersName = data.name;
         const gotUsersRepo = data.public_repos;
