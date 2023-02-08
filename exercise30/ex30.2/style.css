@@ -24,12 +24,27 @@
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    margin-right: 2rem;
-    font-size: larger;
 }
 
 .poster{
     border-radius: 2rem;
     width: 14rem;
     height: 14rem;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    margin: 0;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.title{
+    color: gray
 }

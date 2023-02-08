@@ -16,13 +16,37 @@ function handleInput(ev) {
 
 function createElement(data){
     if(!(data.message === 'Not Found')){
-        const gotMovieAPoster = data.Poster;
-        const gotMovieTitle = data.Title;
+        const gotMoviesAPoster = data.Poster;
+        const gotMoviesTitle = data.Title;
+        const gotMoviesAGenre = data.Genre;
+        const gotMoviesYear = data.Year;
+        const gotMoviesPlot = data.Plot;
+        const gotMoviesDirector = data.Director;
+        const gotMoviesActors = data.Actors;
+        const ratings = data.Ratings;
+        let gotMoviesRatings = [];
+        if(ratings.length > 0){
+
+            ratings.forEach((rating,index) => {
+                gotMoviesRatings[index] = rating.Source;
+                gotMoviesRatings[index] += ' '+ rating.Value;
+             })
+        } else{
+            gotMoviesRatings = 'none at the moment';
+        }
+        console.log('THAT', gotMoviesRatings);
         card.innerHTML = `
         <div class="movie-cards">
-        <img id='posterImg' src=${gotMovieAPoster} class='poster'>
-        <h2>${gotMovieTitle}</h2>
-        <h2></h2>
+        <img id='posterImg' src=${gotMoviesAPoster} class='poster'>
+        <h2 class="title">${gotMoviesTitle}</h2>
+        <h2>Genre:<p>${gotMoviesAGenre}</p></h2>
+        <h2>Year:<p>${gotMoviesYear}</p></h2>
+        <h2>Plot:<p>${gotMoviesPlot}</p></h2>
+        <h2>Director:<p>${gotMoviesDirector}</p></h2>
+        <h2>Actors:<p>${gotMoviesActors}</p></h2>
+        <h2>Ratings:</h2>
+        <p>${gotMoviesRatings}</p>
+ 
         </div>
         `;
     }
