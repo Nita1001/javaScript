@@ -12,8 +12,6 @@ const input = document.querySelector('#inputUserName');
 const parent = document.querySelector('#profile-cards');
 let prevUserName = [];
 
-
-
 input.addEventListener('keypress', function (e) {
     if(e.key === 'Enter'){
         if(!(prevUserName.includes(e.target.value))){
