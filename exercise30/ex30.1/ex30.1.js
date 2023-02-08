@@ -13,11 +13,11 @@ const profilePic = document.querySelector('#profilePic')
 input.addEventListener('keypress', function (e) {
     if(e.key === 'Enter'){
         const userName = e.target.value;
-        getText(userName);
+        getText(userName, e);
     }
 });
 
-async function getText(userName){
+async function getText(userName, e){
     try{
         const res = await fetch(`https://api.github.com/users/${userName}`)
         const data = await res.json();
@@ -31,6 +31,7 @@ async function getText(userName){
         <h3>${gotUsersName}</h3>
         <h3>Public Repos: ${gotUsersRepo}</h3>
         `;
+        e.target.value = '';
     } catch(err) {
         console.log(err);
     }
